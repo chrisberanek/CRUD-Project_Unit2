@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express')
 const app = express()
 const methodOverride = require('method-override')
@@ -21,6 +22,10 @@ app.get('/', (req,res)=>{
 
 // Middleware Ends Here
 
-app.listen(3001, () => {
-  console.log("Students are listening!!!!");
-});
+//app.listen(3001, () => {
+//  console.log("Students are listening!!!!");
+//});
+
+app.listen(process.env.PORT, () => {
+    console.log("Students are listening!!!!");
+  });
