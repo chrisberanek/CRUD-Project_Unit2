@@ -11,16 +11,22 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      username: {
+        type: Sequelize.STRING
+      },
+      password: {
+        type: Sequelize.STRING
+      },
       sport: {
         type: Sequelize.STRING
       },
       region: {
         type: Sequelize.STRING
       },
-      act: {
+      ACT: {
         type: Sequelize.INTEGER
       },
-      userID: {
+      schoolId: {
         type: Sequelize.INTEGER
       },
       createdAt: {

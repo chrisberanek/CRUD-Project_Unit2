@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      School.belongsToMany(models.Student, { through: "id" });
     }
   };
   School.init({
@@ -18,9 +18,8 @@ module.exports = (sequelize, DataTypes) => {
     sport1: DataTypes.STRING,
     sport2: DataTypes.STRING,
     sport3: DataTypes.STRING,
-    region: DataTypes.STRING,
-    minAct: DataTypes.INTEGER,
-    schoolID: DataTypes.INTEGER
+    minACT: DataTypes.INTEGER,
+    region: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'School',

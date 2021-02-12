@@ -20,13 +20,7 @@ module.exports = {
       sport3: {
         type: Sequelize.STRING
       },
-      region: {
-        type: Sequelize.STRING
-      },
-      minAct: {
-        type: Sequelize.INTEGER
-      },
-      schoolID: {
+      minACT: {
         type: Sequelize.INTEGER
       },
       createdAt: {

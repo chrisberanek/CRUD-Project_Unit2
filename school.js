@@ -5,8 +5,7 @@ const school = [
     sport2: 'football',
     sport3: 'baseball',
     region: 'Northwest',
-    minAct: 21,
-    schoolId: 1,
+    minAct: 22,
     },
     {
     name:'Minnesota State University',
@@ -15,7 +14,6 @@ const school = [
     sport3: 'softball',
     region: 'Midwest',
     minAct: 18,
-    schoolId: 2,
     },
     {
     name:'Georgia Tech',
@@ -24,15 +22,13 @@ const school = [
     sport3: 'baseball',
     region: 'Southeast',
     minAct: 20,
-    schoolId: 3,
     },
     {
     name:'Central Arkansas',
     sport1: 'baseball',
     sport2: 'softball',
-    sport3: 'vollyball',
+    sport3: 'wrestling',
     region: 'South',
-    minAct: 19,
-    schoolId: 4,
+    minAct: 21,
     },
 ];

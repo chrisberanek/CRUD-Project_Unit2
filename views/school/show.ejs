@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>College App</title>
+    </head>
+    <body>
+        <form action="/school<%= school.id %>?_method=PUT" method="POST"> 
+        <h1>College Profile Page</h1>
+        <br />
+        <br />
+        <br />
+        Name: <input type="text" name="name" value="<%=school.name%>" /><br />
+        <br />
+        Sports Offered:
+        <input type="text" name="sport1" value="<%=school.sport1%>" />
+        <input type="text" name="sport2" value="<%=school.sport2%>" />
+        <input type="text" name="sport3" value="<%=school.sport3%>" />
+        <br />
+        <br />
+        US Region:
+        <input type="text" name="region" value="<%=school.region%>" /><br />
+        </form>
+    </body>
+</html>
