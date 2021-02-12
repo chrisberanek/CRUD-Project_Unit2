@@ -7,6 +7,8 @@ const methodOverride = require('method-override')
 
 // method override
 app.use(methodOverride('_method'))
+// CSS
+app.use(express.static("public"));
 
 // body parser
 app.use(express.urlencoded({extended:true}))

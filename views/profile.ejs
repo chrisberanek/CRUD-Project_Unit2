@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/app.css" />
   </head>
 
 <body>
@@ -23,6 +24,10 @@
         <input type="text" name="sport" value="<%=student.sport%>" />
         <br />
         <br />
+        ACT score:
+        <input type="number" name="ACT" value="<%=student.ACT%>" />
+        <br />
+        <br />
         US Regional Preference:
         <input type="text" name="region" value="<%=student.region%>" />
         <br />
@@ -33,9 +38,12 @@
     <form action="/student/<%= student.id %>?_method=DELETE" method="POST">
         <input type="submit" value="Delete Profile" />
     </form>
-    
-
-            <br /><br />
-            <a href="/school">View All Schools</a>
+    <h1>Schools added to your Student Profile:</h1>
+        <li>
+            <h2>
+                <%=school.name%>
+            </h2>
+            <p>Minimum ACT required: <%=school.minACT%></p>
+        </li>
 </body>
 </html>

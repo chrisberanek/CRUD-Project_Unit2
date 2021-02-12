@@ -15,10 +15,7 @@ router.get("/signup", (req, res) => {
 
 // STUDENT INDEX
 router.get("/", (req, res) => {
-    Student.findAll().then((student) => {
       res.render("index.ejs", {
-        student: student,
-      });
     });
   });
 
@@ -47,13 +44,14 @@ router.post('/login', (req, res) => {
     });
 });
   
-  
 // SHOW STUDENT Profile
 router.get("/:id", (req, res) => {
     Student.findByPk(req.params.id, {
       //include: [{ model: School }],
     }).then((student) => {
-      School.findAll().then((school) => {
+      School.findOne({
+          where:{id:student.schoolId}
+      }).then((school) => {
         console.log(student);
         res.render("profile.ejs", {
       student: student,
