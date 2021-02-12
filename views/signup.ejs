@@ -7,16 +7,29 @@
   </head>
 
   <body>
-    <h1>Sign Up - College Selection Tool</h1>
-
+    <h1>Create New Student Profile</h1>
+    <!--  NOTE: action will be the route, method will be the HTTP verb-->
     <form action="/student" method="POST">
       Name: <input type="text" name="name" /><br />
       <br />
-      Username: <input type="text" name="username" /> <br />
+      Username: <input type="text" name="username" /><br />
       <br />
       Password: <input type="text" name="password" /><br />
       <br />
-      <input type="submit" value="SignUp" />
+      Sport: <input type="text" name="sport" /><br />
+      <br />
+      ACT: <input type="number" name="ACT" /><br />
+      <br />
+      Region: <input type="text" name="region" /><br />
+      <br />
+      Select School<br /><select name="schoolId">
+        <br />
+        <% for ( let i = 0; i < schools.length; i++ ) {  %>
+        <option value="<%=schools[i].id%>" ><%= schools[i].name%></option>
+        <% } %>
+      </select><br />
+      <br />
+      <input type="submit" name="" value="Create Profile" />
     </form>
   </body>
 </html>

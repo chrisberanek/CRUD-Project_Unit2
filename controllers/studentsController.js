@@ -4,36 +4,38 @@ const router = express.Router();
 const Student = require('../models').Student;
 const School = require('../models').School;
 
+// GET/POST - CREATE NEW STUDENT FROM SIGNUP FORM
+router.get("/signup", (req, res) => {
+    School.findAll().then((schools) =>{
+        res.render("signup.ejs", {
+            schools: schools
+        });
+    })    
+  });
 
 // STUDENT INDEX
-router.get("/:id", (req, res) => {
-    Student.findByPk(req.params.id).then((student) => {
-      res.render("show.ejs", {
+router.get("/", (req, res) => {
+    Student.findAll().then((student) => {
+      res.render("index.ejs", {
         student: student,
       });
     });
   });
-  
-// GET STUDENT SIGNUP FORM
-router.get("/signup", (req, res) => {
-    res.render("/signup.ejs");
-  });
 
-// POST - CREATE NEW STUDENT FROM SIGNUP
 router.post("/", (req, res) => {
-    Student.create(req.body).then(newPlayer => {
-      res.redirect(`/student/profile/${newPlayer.id}`);
+    Student.create(req.body).then(newStudent => {
+      res.redirect(`/student/${newStudent.id}`);
     });
   });
       
 // GET LOGIN
 router.get("/login", (req, res) => {
-    res.render("/login.ejs");
+    res.render("login.ejs");
   });
 
 // Post STUDENT LOGIN - Render STUDENT Profile
 router.post('/login', (req, res) => {
-      Student.findAll({
+      Student.findOne({
         where: {
           username: req.body.username,
           password: req.body.password
@@ -41,27 +43,33 @@ router.post('/login', (req, res) => {
       }).then((student) => {
         console.log(student);
         console.log(student.id);
-        res.redirect(`/profile/${student.id}`);
+        res.redirect(`/student/${student.id}`);
     });
 });
-
   
   
 // SHOW STUDENT Profile
-router.get("/profile/:id", (req, res) => {
+router.get("/:id", (req, res) => {
     Student.findByPk(req.params.id, {
-      include: [{ model: Teams }, { model: Pokemon }],
+      //include: [{ model: School }],
     }).then((student) => {
-      Teams.findAll().then((teams) => {
+      School.findAll().then((school) => {
         console.log(student);
-        res.render("/profile.ejs", {
+        res.render("profile.ejs", {
       student: student,
-      teams: teams,
+      school: school,
         });
       });
     });
   });
 
+  router.get("/:id", (req, res) => {
+    Student.findByPk(req.params.id).then((student) => {
+      res.render("show.ejs", {
+        student: student,
+      });
+    });
+  });
   
 // EDIT/POST STUDENT Profile
 router.get("/:id/edit", (req, res) => {
@@ -71,29 +79,21 @@ router.get("/:id/edit", (req, res) => {
         });
       });
     });
-
   
 router.put("/:id", (req, res) => {
-    student.update(req.body, {
+    Student.update(req.body, {
     where: { id: req.params.id },
-    returning: true,
     }).then((student) => {
-    res.redirect('/student/profile/' + req.params.id );
+    res.redirect('/student/' + req.params.id );
     });
 })
-
     
 // DELETE STUDENT
   router.delete("/:id", (req, res) => {
-    student.destroy({ where: { id: req.params.id } }).then(() => {
+    Student.destroy({ where: { id: req.params.id } }).then(() => {
       res.redirect("/student"); 
     });
   });
-
-
-
-
-
 
 
 module.exports = router;
