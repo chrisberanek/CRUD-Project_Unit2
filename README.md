@@ -1,5 +1,5 @@
 # CRUD-Project_Unit2
-#Project #2: Building a Full-Stack Application
+## Project #2: Building a Full-Stack Application
 
 # Student Athlete College Search Tool
 High school students that plan to attend college and who also currently participate in one or more sports and would like to continue their altletic career at the next level can use this application to narrow the search parameters down by filtering factors such as:
@@ -8,24 +8,24 @@ Geopgraphic Region of the Us
 Minumum Academic Requirement for a School
 Sports Offered by a given School
 
-This application is based on the technology platform of utilizing an "MVC" (Model, View, Controller) with full CRUD functionality on a Student database that uses 7 RESTful routes via JavaScript and HTML frameworks. The Studend model is also associated to a School database as a Belongs-To (School Has-Many to Student) relationship.
+This application is based on the technology platform of utilizing an "MVC" (Model, View, Controller) with full CRUD functionality on a Student database that uses 7 RESTful routes via JavaScript and HTML frameworks. The Student model is also associated to a School database as a Belongs-To relation. School is associated as a Has-Many to Student relationship.
 
 ## Links
 
-GitHub repo: 
-Heroku repo:
+## GitHub repo: https://github.com/chrisberanek/CRUD-Project_Unit2
+## Heroku repo:
 
 ## Technologies Utilized:
 
-    Node.js
-    Express
-    EJS
-    Postgres
-    Sequelize
-    GitHub
-    Visual Studio Code
-    pgAdmin
-    HEROKU
+*    Node.js
+*    Express
+*    EJS
+*    Postgres
+*    Sequelize
+*    GitHub
+*    Visual Studio Code
+*    pgAdmin
+*    HEROKU
 
 ## User Stories
 
@@ -41,12 +41,5 @@ Heroku repo:
 10. Schools should be able to be added, updated or removed from the School database by an admin account access.
 
 
-
-    
-
-
-
-
-
-####Copyright (c) [2021] [Chris Beranek]
+### Copyright (c) [2021] [Chris Beranek]
 
