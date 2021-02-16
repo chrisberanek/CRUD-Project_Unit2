@@ -11,9 +11,9 @@ Sports Offered by a given School
 This application is based on the technology platform of utilizing an "MVC" (Model, View, Controller) with full CRUD functionality on a Student database that uses 7 RESTful routes via JavaScript and HTML frameworks. The Student model is also associated to a School database as a Belongs-To relation. School is associated as a Has-Many to Student relationship.
 
 ## Links
+#### GitHub repo: https://github.com/chrisberanek/CRUD-Project_Unit2
+#### Heroku repo: https://git.heroku.com/beranek-crud-project.git
 
-### GitHub repo: https://github.com/chrisberanek/CRUD-Project_Unit2
-### Heroku repo: https://git.heroku.com/beranek-crud-project.git
 
 ## Technologies Utilized:
 
@@ -41,5 +41,5 @@ This application is based on the technology platform of utilizing an "MVC" (Mode
 10. Schools should be able to be added, updated or removed from the School database by an admin account access.
 
 
-#### Copyright (c) [2021 Chris Beranek
+#### Copyright (c) 2021 Chris Beranek
 
