@@ -12,8 +12,8 @@ This application is based on the technology platform of utilizing an "MVC" (Mode
 
 ## Links
 
-## GitHub repo: https://github.com/chrisberanek/CRUD-Project_Unit2
-## Heroku repo:
+### GitHub repo: https://github.com/chrisberanek/CRUD-Project_Unit2
+### Heroku repo: https://git.heroku.com/beranek-crud-project.git
 
 ## Technologies Utilized:
 
@@ -41,5 +41,5 @@ This application is based on the technology platform of utilizing an "MVC" (Mode
 10. Schools should be able to be added, updated or removed from the School database by an admin account access.
 
 
-### Copyright (c) [2021] [Chris Beranek]
+#### Copyright (c) [2021 Chris Beranek
 
